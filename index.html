@@ -1,104 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unified Bharat Framework | Kallol Chakrabarti</title>
-<meta name="description" content="Comprehensive evidence-based analysis of India's transformation (2014-2025) by Kallol Chakrabarti. 150+ policy initiatives from colonial laws to Ram Rajya.">
-<meta name="keywords" content="India, policy analysis, governance, legal reform, infrastructure, digital India, cultural renaissance, Kallol Chakrabarti, Unified Bharat Framework">
-<meta name="author" content="Kallol Chakrabarti">
-<meta name="robots" content="index, follow">
-<style>
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color:#121212; color:#E0E0E0; margin:0; padding:0; line-height:1.6;}
-  a { color:#FF6600; text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .container { max-width:1200px; margin:0 auto; padding:2rem;}
-  h1,h2,h3,h4 { color:#FFA500; }
-  header { text-align:center; padding:2rem 0; }
-  section { margin-bottom:3rem; }
-  table { width:100%; border-collapse: collapse; margin-top:1rem; }
-  th, td { padding:0.8rem; border:1px solid #333; }
-  th { background-color:#1F1F1F; color:#FFA500; }
-  tr:hover { background-color:#1A1A1A; }
-  .pillar-card { background-color:#1E1E1E; padding:1rem; border-radius:8px; margin-bottom:1rem; }
-  .footer { background-color:#1F1F1F; color:#B0B0B0; text-align:center; padding:2rem; font-size:0.9rem; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Bharat Framework by Kallol Chakrabarti</title>
+    <meta name="google-site-verification" content="6qcwYwzA6RaAwLVA6G3HBTprB8Bdw4A16uZCF5e9Ar8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        a { color: #FFA500; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .header {
+            background-color: #1f1f1f;
+            color: #FFA500;
+            padding: 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background-color: #1f1f1f;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #FFA500;
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-5px); }
+        .stat-number { font-size: 2.5rem; font-weight: bold; color: #FFA500; margin-bottom: 0.5rem; }
+        .stat-label { font-size: 0.95rem; color: #ccc; text-transform: uppercase; letter-spacing: 1px; }
+        .section {
+            background-color: #1f1f1f;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        .section h2 { color: #FFA500; font-size: 2rem; margin-bottom: 1.5rem; border-bottom: 3px solid #FF8C00; padding-bottom: 0.5rem; }
+        .section h3 { color: #FFB84D; font-size: 1.5rem; margin: 1.5rem 0 1rem 0; }
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .pillar-card {
+            background-color: #2c2c2c;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #FFA500;
+            transition: all 0.3s ease;
+        }
+        .pillar-card:hover { transform: scale(1.03); border-color: #FF8C00; }
+        .pillar-card h4 { color: #FFA500; font-size: 1.3rem; margin-bottom: 1rem; }
+        .pillar-card ul { list-style: none; padding-left: 0; }
+        .pillar-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .pillar-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #FFA500;
+            font-weight: bold;
+        }
+        .timeline { position: relative; padding: 2rem 0; }
+        .timeline-item {
+            background-color: #2c2c2c;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #FFA500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover { border-left-width: 8px; }
+        .timeline-year { font-size: 1.8rem; font-weight: bold; color: #FFA500; margin-bottom: 0.5rem; }
+        .timeline-title { font-size: 1.2rem; font-weight: bold; color: #e0e0e0; margin-bottom: 0.5rem; }
+        .timeline-desc { color: #ccc; line-height: 1.6; }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: #FFA500;
+            color: #121212;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .highlight { background-color: #FF8C00; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; color: #e0e0e0; }
+        th { background-color: #333; color: #FFA500; padding: 1rem; text-align: left; }
+        td { padding: 1rem; border-bottom: 1px solid #444; }
+        tr:hover { background-color: #333; }
+        .tag { display: inline-block; background: #FFA500; color: #121212; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin: 0.2rem; font-weight: bold; }
+        .footer { background-color: #1f1f1f; color: #e0e0e0; text-align: center; padding: 2rem; margin-top: 3rem; }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.8rem; }
+            .stats-grid, .pillar-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-<header>
-<h1>🇮🇳 Unified Bharat Framework</h1>
-<p>Created by Kallol Chakrabarti, Independent Researcher</p>
-<p>Documenting 150+ policy initiatives (2014-2025)</p>
-</header>
-<div class="container">
-<section>
-<h2>Overview</h2>
-<p>This project provides a systematic, evidence-based analysis of India's transformation across governance, law, economy, infrastructure, culture, and social welfare from 2014-2025.</p>
-</section>
-<section>
-<h2>Five Pillars of Transformation</h2>
-<div class="pillar-card">
-<h4>1. Legal & Institutional Reform</h4>
-<ul>
-<li>Bharatiya Nyaya Sanhita (2023)</li>
-<li>Article 370 Abrogation (2019)</li>
-<li>Triple Talaq Criminalization (2019)</li>
-</ul>
-</div>
-<div class="pillar-card">
-<h4>2. Demographic Governance</h4>
-<ul>
-<li>Marriage law reforms</li>
-<li>Anti-conversion laws (9+ states)</li>
-</ul>
-</div>
-<div class="pillar-card">
-<h4>3. Institutional Consolidation</h4>
-<ul>
-<li>GST Council</li>
-<li>Ayushman Bharat</li>
-<li>One Nation One Ration Card</li>
-</ul>
-</div>
-<div class="pillar-card">
-<h4>4. Cultural & Symbolic Projects</h4>
-<ul>
-<li>Ram Mandir Consecration</li>
-<li>Kashi Vishwanath Corridor</li>
-</ul>
-</div>
-<div class="pillar-card">
-<h4>5. Infrastructure & Economic Modernization</h4>
-<ul>
-<li>Bharatmala</li>
-<li>Smart Cities Mission</li>
-<li>Bullet Train</li>
-</ul>
-</div>
-</section>
-<section>
-<h2>Key Statistics</h2>
-<table>
-<thead>
-<tr>
-<th>Sector</th><th>Achievement</th><th>Impact</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Financial Inclusion</td><td>50+ crore Jan Dhan accounts</td><td>₹30+ lakh crore DBT</td></tr>
-<tr><td>Healthcare</td><td>Ayushman Bharat - 55 crore beneficiaries</td><td>₹5 lakh coverage per family</td></tr>
-<tr><td>Sanitation</td><td>11+ crore toilets</td><td>ODF status 2019</td></tr>
-</tbody>
-</table>
-</section>
-<section>
-<h2>Access Repository</h2>
-<p>All supporting documents and data are available in this repository. Download links can be added once CSV/data files are finalized.</p>
-</section>
-</div>
-<footer class="footer">
-<p>© 2025 Kallol Chakrabarti. All Rights Reserved.</p>
-<p>Comprehensive Evidence-Based Analysis | 2014-2025 Policy Documentation</p>
-</footer>
+    <div class="header">
+        <h1>🇮🇳 Unified Bharat Framework</h1>
+        <p class="subtitle">Kallol Chakrabarti | Independent Researcher</p>
+        <p style="margin-top: 1rem; font-size: 1rem;">Comprehensive Analysis of India's Transformation (2014-2025)</p>
+    </div>
+
+    <div class="container">
+        <!-- Key Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Major Initiatives Documented</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">11 Years</div>
+                <div class="stat-label">Coverage 2014-2025</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7 Domains</div>
+                <div class="stat-label">Legal, Economic, Cultural, Infrastructure</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">55 Cr+</div>
+                <div class="stat-label">Ayushman Bharat Beneficiaries</div>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>📋 Executive Summary</h2>
+            <p style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 1rem;">
+                Systematic, data-driven analysis of India's institutional transformation since 2014 across 150+ initiatives.
+            </p>
+        </div>
+
+        <!-- Five Pillars -->
+        <div class="section">
+            <h2>🏛️ Five Pillars of Transformation</h2>
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <h4>1. Legal Uniformity + Selective Pluralism</h4>
+                    <ul>
+                        <li>Bharatiya Nyaya Sanhita (2023)</li>
+                        <li>Article 370 Abrogation (2019)</li>
+                        <li>Triple Talaq Ban (2019)</li>
+                        <li>UCC Uttarakhand (2024)</li>
+                        <li>Anti-polygamy legislation</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <h4>2. Demographic Governance via Law</h4>
+                    <ul>
+                        <li>Marriage law reforms</li>
+                        <li>Anti-conversion laws (9+ states)</li>
+                        <li>Population policy discussions</li>
+                        <li>Family structure standardization</li>
+                        <li>Registration reforms</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <h4>3. Institutional Consolidation</h4>
+                    <ul>
+                        <li>GST Council - One Nation One Tax</li>
+                        <li>Ayushman Bharat - 55 Cr beneficiaries</li>
+                        <li>One Nation One Ration Card</li>
+                        <li>JAM Trinity (Jan Dhan-Aadhaar-Mobile)</li>
+                        <li>NEP 2020 - Unified Education</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <h4>4. Symbolic Cultural Projects</h4>
+                    <ul>
+                        <li>Ram Mandir Consecration (2024)</li>
+                        <li>Kashi Vishwanath Corridor (2021)</li>
+                        <li>Statue of Unity (2018)</li>
+                        <li>National War Memorial (2019)</li>
+                        <li>New Parliament Building (2023)</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <h4>5. Infrastructure & Economic Modernization</h4>
+                    <ul>
+                        <li>Bharatmala - 83,677 km highways</li>
+                        <li>Bullet Train (under construction)</li>
+                        <li>Dedicated Freight Corridors</li>
+                        <li>Smart Cities Mission (100 cities)</li>
+                        <li>Ayodhya Development - ₹85,000 cr</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h3>🇮🇳 Unified Bharat Framework</h3>
+            <p>Created by Kallol Chakrabarti | Independent Researcher</p>
+            <p>Comprehensive Evidence-Based Analysis | 2014-2025 Policy Documentation</p>
+            <p style="font-size: 0.9rem; opacity: 0.9;">
+                "From fragmentation to integration, from colonial inheritance to civilizational restoration."
+            </p>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem;">
+                Last Updated: November 2024 | Version 2.0 | Licensed under CC BY-SA 4.0
+            </p>
+        </div>
+    </div>
 </body>
 </html>
