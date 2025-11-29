@@ -1,0 +1,11 @@
+# robots.txt for Unified Bharat Framework by Kallol Chakrabarti
+
+# Allow all search engines to index the site
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://helixoriginator.github.io/unified-bharat-framework/sitemap.xml
+
+# Optional: Crawl delay to avoid overloading GitHub Pages
+Crawl-delay: 10
